@@ -7,14 +7,14 @@
 .contenedorPrincipal{
     display: grid;
     width: 100%;
-    height: 1200px;
+    height: 1500px;
     grid-template-columns: 15% repeat(3,1fr);
     grid-template-rows: 100px repeat(3,1fr) 100px;
     grid-template-areas: 
     "header header header header"
     "main main main main"
     "main main main main"
-    "main main main main"
+    "main main main main"    
     "footer footer footer footer"
     "footer footer footer footer"
     ;
@@ -113,6 +113,170 @@ section input{
     align-self: center;
 }
 
+.post-list{
+    display: flex;
+    min-height: 200px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px; 
+} 
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.post-img-1{
+    background-image: url(../img/1.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-2{
+    background-image: url(../img/2.jpg);
+    width:100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-3{
+    background-image: url(../img/3.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-10{
+    background-image: url(../img/10.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-11{
+    background-image: url(../img/11.png);
+    width:100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-12{
+    background-image: url(../img/12.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-13{
+    background-image: url(../img/13.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-14{
+    background-image: url(../img/14.png);
+    width:100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+.post-img-15{
+    background-image: url(../img/15.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+}
+
+
+
+
+.post{
+    box-shadow: 0 1px 6 px 1px rgba((0), 0, 0, .1);
+    overflow: hidden; 
+    transition: .2s;
+}
+
+.post:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 1px 14px 2px rgba(0, 0, 0, .15);
+}
+
+.post-header{
+    width: 100%;
+    height: 200px;
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.post:hover .post-img-1,
+.post:hover .post-img-2,
+.post:hover .post-img-3{
+transform: scale(1.1);
+}
+
+.postbody{
+    padding: 15;
+    text-align: center;
+}
+
+.postbody span{
+    display: inline-block;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.postbody h2{
+    margin-bottom: 15px;
+}
+
+.postbody p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.postbody .post-link{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgb(165, 165, 240);
+    color: #fff;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .1);
+    transition: .2s;
+}
+
+.postbody .post-link:hover{
+    background: rgb(112, 112, 224);
+    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .2);
+    transform: translate(-4px);
+    
+}
+
 footer{
     grid-area: footer;
     display: grid;
@@ -121,4 +285,16 @@ footer{
     background-color:#101828;
     color: white;
     
+}
+
+@media(max-width: 840px){
+    .content{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 600px){
+    .content{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
